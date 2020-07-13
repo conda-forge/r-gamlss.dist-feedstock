@@ -3,9 +3,9 @@ About r-gamlss.dist
 
 Home: http://www.gamlss.org/
 
-Package license: GPL-2 | GPL-3
+Package license: GPL-2.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A set of distributions  which can be used  for modelling the response variables in Generalized Additive Models for Location Scale and Shape, Rigby and Stasinopoulos (2005), <doi:10.1111/j.1467-9876.2005.00510.x>. The distributions can be continuous, discrete or mixed  distributions.  Extra distributions can be created, by transforming, any continuous distribution defined on the real line,  to  a distribution defined on ranges 0 to infinity  or  0 to 1,  by using a ''log'' or a ''logit' transformation respectively. 
 
