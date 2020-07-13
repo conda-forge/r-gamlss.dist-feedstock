@@ -3,7 +3,7 @@ About r-gamlss.dist
 
 Home: http://www.gamlss.org/
 
-Package license: GPL-2 | GPL-3
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD-3-Clause
 
