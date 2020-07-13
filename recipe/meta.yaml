@@ -1,4 +1,4 @@
-{% set version = "5.1-6" %}
+{% set version = "5.1-7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gamlss.dist_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gamlss.dist/gamlss.dist_{{ version }}.tar.gz
-  sha256: 3ff0e36dfd7ddea109410c539375a408af8f8f865dd8865555e41fb0402720dd
+  sha256: 9871c38c893a8df7874c533351858dfe4e7587c71021dbbf88c0c76ff3c0ef5b
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,15 +44,10 @@ test:
 about:
   home: http://www.gamlss.org/
   license: GPL-2 | GPL-3
-  summary: 'A set of distributions  which can be used  for modelling the response variables in
-    Generalized Additive Models for Location Scale and Shape, Rigby and Stasinopoulos
-    (2005), <doi:10.1111/j.1467-9876.2005.00510.x>. The distributions can be continuous,
-    discrete or mixed  distributions.  Extra distributions can be created, by transforming,
-    any continuous distribution defined on the real line,  to  a distribution defined
-    on ranges 0 to infinity  or  0 to 1,  by using a ''''log'''' or a ''''logit'' transformation
-    respectively. '
+  summary: "A set of distributions  which can be used  for modelling the response variables in Generalized Additive Models for Location Scale and Shape, Rigby and Stasinopoulos (2005), <doi:10.1111/j.1467-9876.2005.00510.x>. The distributions can be continuous, discrete or mixed  distributions.  Extra distributions can be\
+    \ created, by transforming, any continuous distribution defined on the real line,  to  a distribution defined on ranges 0 to infinity  or  0 to 1,  by using a ''log'' or a ''logit' transformation respectively. "
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
