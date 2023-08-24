@@ -1,4 +1,4 @@
-{% set version = "6.0-5" %}
+{% set version = "6.1-1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gamlss.dist_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gamlss.dist/gamlss.dist_{{ version }}.tar.gz
-  sha256: 0f88afdfb148de79d3ece66bf4631ea0dc3ecf1188680802abffd6bc7139a20e
+  sha256: d2db3a7658799c2ef212aa18cb75a3ecf4f73faf8c13dfdc3c14b21ae0129069
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,8 +44,8 @@ test:
 about:
   home: http://www.gamlss.org/
   license: GPL-2.0-or-later
-  summary: "A set of distributions  which can be used  for modelling the response variables in Generalized Additive Models for Location Scale and Shape, Rigby and Stasinopoulos (2005), <doi:10.1111/j.1467-9876.2005.00510.x>. The distributions can be continuous, discrete or mixed  distributions.  Extra distributions can be\
-    \ created, by transforming, any continuous distribution defined on the real line,  to  a distribution defined on ranges 0 to infinity  or  0 to 1,  by using a ''log'' or a ''logit' transformation respectively. "
+  summary: "A set of distributions  which can be used  for modelling the response variables in Generalized Additive Models for Location Scale and Shape, Rigby and Stasinopoulos (2005), <doi:10.1111/j.1467-9876.2005.00510.x>. The distributions can be continuous, discrete or mixed  distributions.  Extra distributions can be
+    created, by transforming, any continuous distribution defined on the real line,  to  a distribution defined on ranges 0 to infinity  or  0 to 1,  by using a ''log'' or a ''logit' transformation respectively. "
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
